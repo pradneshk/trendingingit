@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repoList">
+    <fragment
+        android:id="@+id/repoList"
+        android:name="com.pradnesh.trendingingit.view.fragment.RepoList"
+        android:label="RepoList" >
+        <action
+            android:id="@+id/action_repoList_to_repoDetail"
+            app:destination="@id/repoDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/repoDetail"
+        android:name="com.pradnesh.trendingingit.view.fragment.RepoDetail"
+        android:label="RepoDetail" >
+        <argument
+            android:name="repoUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>
